@@ -1,23 +1,14 @@
-import Profile from "./pages/profile.jsx";
-import Projects from "./pages/Projects.jsx";
-import Contact from "./pages/contactme.jsx";
-import About from "./pages/aboutme.jsx";
+import Home from "./pages/Home.jsx";
 import Header from "./components/Header.jsx"
 import Footer from "./components/Footer.jsx";
-import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <div className="bg-gradient-to-b from-gray-800 to-gray-900">
     <Header></Header>
-      <Routes>
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-      <Footer/>
-    </>
+    <Home/>
+    <Footer/>
+    </div>
   );
 }
 
