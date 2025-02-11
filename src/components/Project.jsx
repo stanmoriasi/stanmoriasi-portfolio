@@ -37,7 +37,7 @@ const Project = ({ project }) => {
           <div className="modal">
             <div className="modal-content">
               <span className="close" onClick={toggleExpand}>&times;</span>
-              <h2>{project.name}</h2>
+              <h2 className="project-card">{project.name}</h2>
               <p>{project.description}</p>
               <p>{project.stack.join(' | ')}</p>
               <div className="modal-image" style={{ backgroundImage: `url(${project.images[0]})` }} />

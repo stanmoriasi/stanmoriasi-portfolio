@@ -1,4 +1,3 @@
-import { useEffect} from "react";
 import Project from "../components/Project";
 function Projects() {
   const projects = [
@@ -8,13 +7,9 @@ function Projects() {
     { name: "E-commerce", url: "example.com", images: ["/assets/images/employeeTrackerCLI.png"], description: "An e-commerce platform.", stack: ["React", "Node.js", "MongoDB"] },
   ];
 
-  useEffect(() => {
-    document.title = "Stan Moriasi | Projects";
-  }, []);
-
   return (
     <div className="projects-container h-[100vh]" id="projects">
-      <h1 className="title text-center text-[35px]">Sample Projects</h1>
+      <h1 className="title text-center text-[35px] text-white">Sample Projects</h1>
       <div className="grid grid-cols-4 gap-4">
         {projects.map((project, index) => (
           <Project project={project} key={index} />
