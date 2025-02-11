@@ -198,3 +198,13 @@ a,
   background-position: center;
   margin-bottom: 20px; /* Adjust the margin as needed */
 }
+
+.project-card h2 {
+  text-align: center;
+  color: green;
+}
+
+.project-card p {
+  text-align: center;
+  color: black;
+}
