@@ -11,7 +11,7 @@ function Home() {
   return (
     <div className="flex flex-col items-center justify-start relative pt-[5%] border border-red-500 h-[max-content]">
       <section className='h-[100vh]'>
-      <img src='/src/assets/images/avatar-new.png' alt="Avatar" className="absolute w-[400px] h-[500px] top-[5%] right-0" />
+      <img src='/assets/images/avatar-new.png' alt="Avatar" className="absolute w-[400px] h-[500px] top-[5%] right-0" />
    
    <div className="text-center max-w-[60vw]">
      <h1 className="text-4xl font-bold text-white">Hello, my name is Stan Moriasi</h1>
