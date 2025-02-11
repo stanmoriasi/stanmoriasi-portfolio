@@ -23,7 +23,7 @@ const Project = ({ project }) => {
             <div className="face face1">
               <div className="content">
                 <h3>{project.name}</h3>
-                <p>{project.description}</p>
+                {/* <p>{project.description}</p> */}
                 <p>{`${project.stack[0]} | ${project.stack[1]} | ${project.stack[2]}`}</p>
               </div>
             </div>
@@ -39,7 +39,8 @@ const Project = ({ project }) => {
               <span className="close" onClick={toggleExpand}>&times;</span>
               <h2>{project.name}</h2>
               <p>{project.description}</p>
-              <p>{`${project.stack[0]} | ${project.stack[1]} | ${project.stack[2]}`}</p>
+              <p>{project.stack.join(' | ')}</p>
+              <div className="modal-image" style={{ backgroundImage: `url(${project.images[0]})` }} />
               <a href={project.url} target="_blank" rel="noopener noreferrer" className="project-link">View Project</a>
             </div>
           </div>

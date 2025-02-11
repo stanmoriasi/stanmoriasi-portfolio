@@ -2,7 +2,7 @@ import { useEffect} from "react";
 import Project from "../components/Project";
 function Projects() {
   const projects = [
-    { name: "Weather App", url: "example.com", images: ["./src/assets/images/employeeTrackerCLI.png"], description: "A weather forecasting app." , stack: ["React", "Node.js", "MongoDB"] },
+    { name: "Employee Tracker", url: "https://github.com/stanmoriasi/employee-tracker-using-nodejs", images: ["./src/assets/images/employeeTrackerCLI.png"], description: "This project is used to perform basic operations on an employee database. The project utilizes Postgres database on the backend, and Inquirer package for generating user prompts on a command line interface.." , stack: [ "Nodejs", "Postgres"] },
     { name: "Todo List", url: "example.com", images: ["./src/assets/images/employeeTrackerCLI.png"], description: "A simple todo list app.",stack: ["React", "Node.js", "MongoDB"] },
     { name: "Portfolio", url: "example.com", images: ["./src/assets/images/employeeTrackerCLI.png"], description: "My personal portfolio website." , stack: ["React", "Node.js", "MongoDB"]},
     { name: "E-commerce", url: "example.com", images: ["./src/assets/images/employeeTrackerCLI.png"], description: "An e-commerce platform.", stack: ["React", "Node.js", "MongoDB"] },
