@@ -3,9 +3,9 @@ function Contact() {
     return (
       <div className="flex flex-col items-center justify-center p-6" id="contactme">
       <h1 className="text-4xl font-bold text-white mb-8">Contact Me</h1>
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md ">
         <form>
-          <div className="mb-4">
+          <div className="mb-4 ">
             <label htmlFor="name" className="block text-gray-700 font-bold mb-2">Name</label>
             <input type="text" id="name" name="name" required className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" />
           </div>
