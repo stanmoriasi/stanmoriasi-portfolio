@@ -41,7 +41,7 @@ const Project = ({ project }) => {
               <p>{project.description}</p>
               <p>{project.stack.join(' | ')}</p>
               <div className="modal-image" style={{ backgroundImage: `url(${project.images[0]})` }} />
-              <a href={project.url} target="_blank" rel="noopener noreferrer" className="project-link">View Project</a>
+              <a href={project.url} target="_blank" rel="noopener noreferrer" className="project-link">View Project on Github</a>
             </div>
           </div>
         )}
