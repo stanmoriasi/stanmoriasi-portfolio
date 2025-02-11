@@ -1,13 +1,9 @@
-import { useEffect } from 'react';
 import Projects from '../pages/Projects';
 import About from '../pages/Aboutme';
 import Contact from '../pages/Contactme';
 import Resume from './Resume';
 
 function Home() {
-  useEffect(() => {
-    document.title = "Stan Moriasi | Home";
-  }, []);
   return (
     <div className="flex flex-col items-center justify-start relative pt-[5%] border border-red-500 h-[max-content]">
       <section className='h-[100vh]'>
@@ -23,7 +19,7 @@ function Home() {
 
       <section><Projects/></section>
       <section><About/></section>
-      <section><Contact/></section>
+      <section id="contactme"><Contact/></section>
       <section><Resume/></section>
     </div>
   );
