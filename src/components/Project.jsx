@@ -9,25 +9,34 @@ const Project = ({ project }) => {
   };
 
   return (
-    <div className={`projects ${expanded ? 'expanded' : ''}`} onClick={toggleExpand}>
-
-<div className="card" key="{Math.random()}">
-		<div className="face face1">
-			<div className="content">
-				{/* <i className="{`bi" ${pj.icon}`} /> */}
-				<h3>{project.name}</h3>
-				<p>{project.description}</p>
-				<p>{`${project.stack[0]} | ${project.stack[1]} | ${project.stack[2]}`}</p>
-			</div>
-		</div>
-		<div className="face face2">
-			<div className="content" style={{ backgroundImage: `url(${project.images[0]})`
-			}} />
-			{/* <Popup name="{pj.shortname}" /> */}
-		</div>
-	</div>
-
-    </div>
+      <div className="project-card">
+        <div className={`projects ${expanded ? 'expanded' : ''}`} onClick={toggleExpand}>
+          <div className="card">
+            <div className="face face1">
+              <div className="content">
+                <h3>{project.name}</h3>
+                <p>{project.description}</p>
+                <p>{`${project.stack[0]} | ${project.stack[1]} | ${project.stack[2]}`}</p>
+              </div>
+            </div>
+            <div className="face face2">
+              <div className="content" style={{ backgroundImage: `url(${project.images[0]})` }} />
+            </div>
+          </div>
+        </div>
+  
+        {expanded && (
+          <div className="modal">
+            <div className="modal-content">
+              <span className="close" onClick={toggleExpand}>&times;</span>
+              <h2>{project.name}</h2>
+              <p>{project.description}</p>
+              <p>{`${project.stack[0]} | ${project.stack[1]} | ${project.stack[2]}`}</p>
+              <a href={project.url} target="_blank" rel="noopener noreferrer" className="project-link">View Project</a>
+            </div>
+          </div>
+        )}
+      </div>
   );
 };
 
@@ -38,7 +47,8 @@ Project.propTypes = {
     name: PropTypes.string.isRequired,
     description: PropTypes.string,
     images: PropTypes.arrayOf(PropTypes.string).isRequired,
-    stack: PropTypes.arrayOf(PropTypes.string).isRequired
+    stack: PropTypes.arrayOf(PropTypes.string).isRequired,
+    url: PropTypes.string.isRequired
   }).isRequired
 };
 
