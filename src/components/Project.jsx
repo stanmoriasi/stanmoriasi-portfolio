@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Project = ({ project }) => {
   const [expanded, setExpanded] = useState(false);
@@ -7,6 +7,14 @@ const Project = ({ project }) => {
   const toggleExpand = () => {
     setExpanded(!expanded);
   };
+
+  useEffect(() => {
+    if (expanded) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }, [expanded]);
 
   return (
       <div className="project-card">
