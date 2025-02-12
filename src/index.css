@@ -193,10 +193,10 @@ a,
 
 .modal-image {
   width: 100%;
-  height: 300px; /* Adjust the height as needed */
+  height: 300px; 
   background-size: cover;
   background-position: center;
-  margin-bottom: 20px; /* Adjust the margin as needed */
+  margin-bottom: 20px; 
 }
 
 .project-card h2 {
@@ -207,4 +207,31 @@ a,
 .project-card p {
   text-align: center;
   color: black;
+}
+
+@media (max-width: 768px) {
+  .projects .card .face {
+    width: 100%;
+    height: auto;
+  }
+
+  .projects .card .face.face1,
+  .projects .card .face.face2 {
+    transform: none;
+  }
+
+  .projects .card:hover .face.face1,
+  .projects .card:hover .face.face2 {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .modal-content {
+    width: 90%;
+    max-width: 90%;
+  }
+
+  .modal-image {
+    height: 200px;
+  }
 }
