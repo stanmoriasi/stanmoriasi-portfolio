@@ -5,7 +5,7 @@ import Resume from './Resume';
 
 function Home() {
   return (
-    <div className="flex flex-col items-center justify-start relative pt-[5%] border border-red-500 h-[max-content]">
+    <div className="flex flex-col items-center justify-start relative pt-[5%] h-[max-content]">
       <section className='h-[100vh]'>
       <img src='/assets/images/avatar-new.png' alt="Avatar" className="absolute w-[400px] h-[500px] top-[5%] right-0" />
    
